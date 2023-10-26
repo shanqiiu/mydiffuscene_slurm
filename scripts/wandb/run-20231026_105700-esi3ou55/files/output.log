@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "train_diffusion.py", line 265, in <module>
+    main(sys.argv[1:])
+  File "train_diffusion.py", line 238, in main
+    batch_loss = train_on_batch(network, optimizer, sample, config)
+  File "/fs1/private/user/jiangbowei/code/DiffuScene-master/scene_diffusion/networks/diffusion_scene_layout_ddpm.py", line 447, in train_on_batch
+    loss, loss_dict = model.get_loss(sample_params)
+  File "/home/jiangbowei/anaconda3/envs/diffuscene/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1265, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'DataParallel' object has no attribute 'get_loss'

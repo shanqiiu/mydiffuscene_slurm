@@ -10,7 +10,7 @@
 import argparse
 import logging
 import os
-os.environ["CUDA_DEVICES"] = "0,1,2,3"
+# os.environ["CUDA_DEVICES"] = "0,1,2,3"
 
 import sys
 
@@ -88,6 +88,8 @@ def main(argv):
 
     if torch.cuda.is_available():
         device = torch.device("cuda")
+        print("Number of GPUs:", torch.cuda.device_count())
+
     else:
         device = torch.device("cpu")
     print("Running code on", device)

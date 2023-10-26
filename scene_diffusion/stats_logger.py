@@ -92,7 +92,7 @@ class WandB(StatsLogger):
         self._epoch = 0
         self._validation = False
         # Login to wandb
-        wandb.login()
+        wandb.login(key="64f5becad885251078a3ae93e81e773c8657ab17")
 
         # Init the run
         wandb.init(

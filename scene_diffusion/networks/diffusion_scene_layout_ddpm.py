@@ -444,6 +444,8 @@ def train_on_batch(model, optimizer, sample_params, config):
     # Make sure that everything has the correct size
     optimizer.zero_grad()
     # Compute the loss
+    # loss, loss_dict = model.get_loss(sample_params)
+    # 此处有改动
     loss, loss_dict = model.get_loss(sample_params)
     for k, v in loss_dict.items():
         StatsLogger.instance()[k].value = v.item()

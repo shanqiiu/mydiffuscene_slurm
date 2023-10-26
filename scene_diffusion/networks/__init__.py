@@ -3,7 +3,7 @@ import math
 import torch
 
 import os
-os.environ["CUDA_DEVICES"] = "0,1,2,3"
+# os.environ["CUDA_DEVICES"] = "0,1,2,3"
 
 # 此处修改
 try:
@@ -16,6 +16,8 @@ from .diffusion_scene_layout_ddpm import DiffusionSceneLayout_DDPM, \
     train_on_batch as train_on_batch_diffusion_scene_layout_ddpm, \
     validate_on_batch as validate_on_batch_diffusion_scene_layout_ddpm 
 
+
+device_ids = [0, 1, 2, 3]
 
 def optimizer_factory(config, parameters):
     """Based on the provided config create the suitable optimizer."""
@@ -69,8 +71,9 @@ def build_network(
         network.load_state_dict(
             torch.load(weight_file, map_location=device)
         )
-    if device is "cuda":
-        network=torch.nn.DataParallel(network, device_ids="CUDA_DEVICES")
+    # if torch.cuda.is_available():
+    #     network = network.cuda(device=device_ids[0]) # 模型加载到设备0
+    #     network=torch.nn.DataParallel(network, device_ids=device_ids)
     # network.to(device)
     network.to(device)
     return network, train_on_batch, validate_on_batch

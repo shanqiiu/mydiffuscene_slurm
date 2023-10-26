@@ -1,0 +1,27 @@
+2023-10-26 13:31:49,723 INFO    MainThread:3087642 [wandb_setup.py:_flush():76] Current SDK version is 0.15.12
+2023-10-26 13:31:49,723 INFO    MainThread:3087642 [wandb_setup.py:_flush():76] Configure stats pid to 3087642
+2023-10-26 13:31:49,723 INFO    MainThread:3087642 [wandb_setup.py:_flush():76] Loading settings from /home/jiangbowei/.config/wandb/settings
+2023-10-26 13:31:49,723 INFO    MainThread:3087642 [wandb_setup.py:_flush():76] Loading settings from /fs1/private/user/jiangbowei/code/DiffuScene-master/scripts/wandb/settings
+2023-10-26 13:31:49,723 INFO    MainThread:3087642 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-10-26 13:31:49,723 INFO    MainThread:3087642 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'scripts/train_diffusion.py', 'program_abspath': '/fs1/private/user/jiangbowei/code/DiffuScene-master/scripts/train_diffusion.py', 'program': 'train_diffusion.py'}
+2023-10-26 13:31:49,723 INFO    MainThread:3087642 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2023-10-26 13:31:49,723 INFO    MainThread:3087642 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2023-10-26 13:31:49,723 INFO    MainThread:3087642 [wandb_init.py:_log_setup():528] Logging user logs to /fs1/private/user/jiangbowei/code/DiffuScene-master/scripts/wandb/run-20231026_133149-yrevw5e0/logs/debug.log
+2023-10-26 13:31:49,723 INFO    MainThread:3087642 [wandb_init.py:_log_setup():529] Logging internal logs to /fs1/private/user/jiangbowei/code/DiffuScene-master/scripts/wandb/run-20231026_133149-yrevw5e0/logs/debug-internal.log
+2023-10-26 13:31:49,723 INFO    MainThread:3087642 [wandb_init.py:init():568] calling init triggers
+2023-10-26 13:31:49,723 INFO    MainThread:3087642 [wandb_init.py:init():575] wandb.init called with sweep_config: {}
+config: {'data': {'dataset_type': 'cached_threedfront', 'encoding_type': 'cached_diffusion_cosin_angle_objfeatsnorm_lat32_wocm', 'dataset_directory': '/home/jiangbowei/code/tmp/diffuscene/3d_front_processed/bedrooms_objfeats_32_64', 'annotation_file': '../config/bedroom_threed_front_splits.csv', 'path_to_invalid_scene_ids': '../config/invalid_threed_front_rooms.txt', 'path_to_invalid_bbox_jids': '../config/black_list.txt', 'augmentations': ['fixed_rotations'], 'filter_fn': 'threed_front_bedroom', 'train_stats': 'dataset_stats.txt', 'room_layout_size': '64,64'}, 'network': {'type': 'diffusion_scene_layout_ddpm', 'net_type': 'unet1d', 'point_dim': 62, 'latent_dim': 0, 'room_mask_condition': False, 'sample_num_points': 12, 'objectness_dim': 0, 'class_dim': 22, 'angle_dim': 2, 'objfeat_dim': 32, 'learnable_embedding': True, 'instance_condition': True, 'instance_emb_dim': 128, 'diffusion_kwargs': {'schedule_type': 'linear', 'beta_start': 0.0001, 'beta_end': 0.02, 'time_num': 1000, 'loss_type': 'mse', 'model_mean_type': 'eps', 'model_var_type': 'fixedsmall', 'loss_separate': True, 'loss_iou': True, 'train_stats_file': '/home/jiangbowei/code/tmp/diffuscene/3d_front_processed/bedrooms_objfeats_32_64/dataset_stats.txt'}, 'net_kwargs': {'dim': 512, 'dim_mults': [1, 1, 1, 1], 'channels': 62, 'objectness_dim': 0, 'class_dim': 22, 'angle_dim': 2, 'objfeat_dim': 32, 'context_dim': 0, 'instanclass_dim': 128, 'seperate_all': True}}, 'feature_extractor': {'name': 'resnet18', 'feature_size': 64, 'freeze_bn': True, 'input_channels': 1}, 'training': {'splits': ['train', 'val'], 'epochs': 60000, 'steps_per_epoch': 500, 'batch_size': 128, 'save_frequency': 1000, 'max_grad_norm': 10, 'optimizer': 'Adam', 'weight_decay': 0.0, 'schedule': 'step', 'lr': 0.0002, 'lr_step': 10000, 'lr_decay': 0.5}, 'validation': {'splits': ['test'], 'frequency': 10, 'batch_size': 128, 'gen_traj': False, 'num_step': 100, 'gen_gt': False, 'gen_prob_map': False}, 'logger': {'type': 'wandb', 'project': 'diffuscene'}}
+2023-10-26 13:31:49,723 INFO    MainThread:3087642 [wandb_init.py:init():618] starting backend
+2023-10-26 13:31:49,731 INFO    MainThread:3087642 [wandb_init.py:init():622] setting up manager
+2023-10-26 13:31:49,732 INFO    MainThread:3087642 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-10-26 13:31:49,734 INFO    MainThread:3087642 [wandb_init.py:init():628] backend started and connected
+2023-10-26 13:31:49,737 INFO    MainThread:3087642 [wandb_init.py:init():720] updated telemetry
+2023-10-26 13:31:49,799 INFO    MainThread:3087642 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2023-10-26 13:31:50,534 INFO    MainThread:3087642 [wandb_run.py:_on_init():2220] communicating current version
+2023-10-26 13:31:51,404 INFO    MainThread:3087642 [wandb_run.py:_on_init():2229] got version response 
+2023-10-26 13:31:51,404 INFO    MainThread:3087642 [wandb_init.py:init():804] starting run threads in backend
+2023-10-26 13:31:57,695 INFO    MainThread:3087642 [wandb_run.py:_console_start():2199] atexit reg
+2023-10-26 13:31:57,695 INFO    MainThread:3087642 [wandb_run.py:_redirect():2054] redirect: wrap_raw
+2023-10-26 13:31:57,695 INFO    MainThread:3087642 [wandb_run.py:_redirect():2119] Wrapping output streams.
+2023-10-26 13:31:57,695 INFO    MainThread:3087642 [wandb_run.py:_redirect():2144] Redirects installed.
+2023-10-26 13:31:57,696 INFO    MainThread:3087642 [wandb_init.py:init():845] run started, returning control to user process
